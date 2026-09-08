@@ -2,9 +2,9 @@
   Put your photo here. Replace "brand-photo.jpg" with your actual
   image filename, and place the image in the same folder as this README.
 -->
-<img src="./public/Home.png" alt="Kheyout"  />
+<img src="./public/Home.png" alt="khoyout"  />
 
-# Kheyout 🧶
+# khoyout 🧶
 
 **Handmade fiber art, one thread at a time.**
 
@@ -15,10 +15,10 @@
 ## Our Story
 
 Hey there! I'm Holy, I'm 18, and I'm a fiber artist. I started my small
-business, Kheyout, in August 2020, where I offer different kinds of
+business, khoyout, in August 2020, where I offer different kinds of
 customized and handmade fiber art.
 
-*Kheyout* means **"threads"** in Arabic — and that's really what this whole
+*khoyout* means **"threads"** in Arabic — and that's really what this whole
 thing is built on: one thread at a time, turned into something you can hold,
 gift, or hang up and smile at.
 
