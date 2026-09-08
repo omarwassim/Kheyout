@@ -2,7 +2,7 @@
   Put your photo here. Replace "brand-photo.jpg" with your actual
   image filename, and place the image in the same folder as this README.
 -->
-<img src="./public/Home.png" alt="Kheyout" width="400" />
+<img src="./public/Home.png" alt="Kheyout"  />
 
 # Kheyout 🧶
 
