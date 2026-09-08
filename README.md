@@ -2,7 +2,7 @@
   Put your photo here. Replace "brand-photo.jpg" with your actual
   image filename, and place the image in the same folder as this README.
 -->
-![Kheyout](./Home.png)
+![Kheyout](../public/Home.png)
 
 # Kheyout 🧶
 
