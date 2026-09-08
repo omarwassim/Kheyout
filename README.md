@@ -49,4 +49,3 @@ in the journey 🤍
 
 ---
 
-<p align="center"><i>Made with 🤍 by Kheyout</i></p>
