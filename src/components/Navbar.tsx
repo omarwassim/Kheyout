@@ -7,13 +7,13 @@ export default function Navbar() {
         <div className="flex items-center gap-3">
           <Image
             src="/logo.jpg"
-            alt="Kheyout logo"
+            alt="khoyout logo"
             width={40}
             height={40}
             className="rounded-full object-cover"
           />
           <span className="font-display text-lg font-semibold tracking-tight">
-            Kheyout
+            khoyout
           </span>
         </div>
         <nav className="hidden items-center gap-8 text-sm text-ink/70 sm:flex">

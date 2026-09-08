@@ -2,8 +2,8 @@
 
 import { useEffect, useState, FormEvent } from "react";
 
-const STORAGE_KEY = "kheyout_discount_email";
-const SEEN_KEY = "kheyout_discount_modal_seen";
+const STORAGE_KEY = "khoyout_discount_email";
+const SEEN_KEY = "khoyout_discount_modal_seen";
 
 export default function DiscountModal() {
   const [open, setOpen] = useState(false);

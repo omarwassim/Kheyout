@@ -16,9 +16,9 @@ const quicksand = Quicksand({
 });
 
 export const metadata: Metadata = {
-  title: "Kheyout | Handmade Crochet Spider-Man",
+  title: "khoyout | Handmade Crochet Spider-Man",
   description:
-    "Reserve a handmade crochet Spider-Man car charm from Kheyout Handmade Products.",
+    "Reserve a handmade crochet Spider-Man car charm from khoyout Handmade Products.",
   icons:"icon.png"  
   };
 

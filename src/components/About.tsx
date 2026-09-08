@@ -5,7 +5,7 @@ export default function About() {
     <section id="about" className="border-t border-black/5 bg-white">
       <div className="mx-auto max-w-7xl px-6 py-16">
         <h2 className="font-display text-3xl font-semibold tracking-tight text-ink">
-          About Kheyout
+          About khoyout
         </h2>
 
         <div className="mt-10 grid grid-cols-1 gap-10 md:grid-cols-[0.9fr_1.3fr] md:gap-16">
@@ -13,7 +13,7 @@ export default function About() {
           <div className="overflow-hidden rounded-2xl border border-black/5 bg-teal-light">
             <Image
               src="/about.png"
-              alt="Holy - founder of Kheyout"
+              alt="Holy - founder of khoyout"
               width={500}
               height={500}
               className="h-full w-full object-cover"
@@ -37,7 +37,7 @@ export default function About() {
             </p>
 
             <p className="mt-4 max-w-[65ch] text-base leading-relaxed text-ink/70">
-              Kheyout means &ldquo;threads&rdquo; in Arabic, and that&apos;s
+              khoyout means &ldquo;threads&rdquo; in Arabic, and that&apos;s
               really what this whole thing is built on: one thread at a time,
               turned into something you can hold, gift, or hang up and smile
               at. Every piece is crocheted by hand, no machines, no mass

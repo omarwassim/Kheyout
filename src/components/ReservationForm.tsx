@@ -47,7 +47,7 @@ export default function ReservationForm() {
   const fileInputRef = useRef<HTMLInputElement>(null);
 
   useEffect(() => {
-    setHasDiscount(localStorage.getItem("kheyout_discount_email") !== null);
+    setHasDiscount(localStorage.getItem("khoyout_discount_email") !== null);
   }, []);
 
   const unitPrice = hasDiscount

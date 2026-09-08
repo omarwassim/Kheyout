@@ -36,7 +36,7 @@ export async function sendReservationEmail(reservation: IReservation) {
 
   const html = `
     <div style="font-family: Arial, sans-serif; max-width: 560px; margin: 0 auto;">
-      <h2 style="color:#2E8378;">New Reservation - Kheyout</h2>
+      <h2 style="color:#2E8378;">New Reservation - khoyout</h2>
       <table style="width:100%; border-collapse: collapse;">
         <tbody>
           <tr><td style="padding:6px 0;"><strong>Name</strong></td><td>${reservation.name}</td></tr>
@@ -64,7 +64,7 @@ export async function sendReservationEmail(reservation: IReservation) {
   `;
 
   await transporter.sendMail({
-    from: `"Kheyout Website" <${process.env.SMTP_USER}>`,
+    from: `"khoyout Website" <${process.env.SMTP_USER}>`,
     to: owners.join(","),
     subject: `New Reservation from ${reservation.name}`,
     html,
