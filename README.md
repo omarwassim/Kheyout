@@ -1,55 +1,51 @@
-# Kheyout — Crochet Spider-Man Reservation Site
+<!--
+  Put your photo here. Replace "brand-photo.jpg" with your actual
+  image filename, and place the image in the same folder as this README.
+-->
+<img src="./public/Home.png" alt="Kheyout"  />
 
-A simple Next.js + MongoDB site to reserve a handmade crochet Spider-Man
-car charm (500 EGP, cash on delivery).
+# Kheyout 🧶
 
-## Features
-- Product hero with your logo and Spider-Man photo
-- About Kheyout section linking to Instagram (@__khoyout)
-- Reviews section (plain cards, edit the text in `src/lib/data/reviews.ts`)
-- Reservation form: name, email, phone, address, quantity, cash payment,
-  optional notes, optional custom-design photo upload
-- Email popup on first visit: enter email → get 15% off automatically
-  applied at checkout (verified server-side, not just trusted from the browser)
-- On every reservation, an email is sent to **two** owner inboxes with all
-  the order details (and the custom design photo attached, if provided)
-- Orders are stored in MongoDB
+**Handmade fiber art, one thread at a time.**
 
-## 1. Install dependencies
-```bash
-npm install
-```
+[Instagram: @__khoyout](https://www.instagram.com/__khoyout/)
 
-## 2. Set up environment variables
-Copy `.env.example` to `.env.local` and fill in your real values:
-```bash
-cp .env.example .env.local
-```
+---
 
-- `MONGODB_URI`: from [MongoDB Atlas](https://www.mongodb.com/atlas) (free tier works fine) — create a cluster, a database user, and copy the connection string.
-- `SMTP_USER` / `SMTP_PASSWORD`: if using Gmail, turn on 2-Step Verification then create an **App Password** at https://myaccount.google.com/apppasswords. Use that 16-character password, not your normal Gmail password.
-- `OWNER_EMAIL_1` / `OWNER_EMAIL_2`: the two inboxes that should receive every reservation.
+## Our Story
 
-## 3. Run locally
-```bash
-npm run dev
-```
-Open http://localhost:3000
+Hey there! I'm Holy, I'm 18, and I'm a fiber artist. I started my small
+business, Kheyout, in August 2020, where I offer different kinds of
+customized and handmade fiber art.
 
-## 4. Deploy
-The easiest option is [Vercel](https://vercel.com):
-1. Push this project to a GitHub repo.
-2. Import it into Vercel.
-3. Add the same environment variables from `.env.local` in the Vercel project settings.
-4. Deploy.
+*Kheyout* means **"threads"** in Arabic — and that's really what this whole
+thing is built on: one thread at a time, turned into something you can hold,
+gift, or hang up and smile at.
 
-## Editing content
-- **Reviews**: `src/lib/data/reviews.ts`
-- **Price**: `PRODUCT_PRICE` in `.env.local` (also update `BASE_PRICE` in `src/components/ReservationForm.tsx` to match, since the price shown before submitting is calculated on the client for a live preview)
-- **Discount %**: `DISCOUNT_PERCENT` in `.env.local` (also update `DISCOUNT_PERCENT` in `src/components/ReservationForm.tsx`)
-- **Logo / product photo**: replace `public/logo.jpg` and `public/spiderman.png`
-- **Instagram link**: search for `__khoyout` in `src/components/About.tsx` and `src/components/Footer.tsx`
+What started as a small hobby turned into a small business making car
+charms, plushies, and fully custom designs based on whatever the customer
+has in mind. If you can describe it, there's a good chance it can be
+crocheted.
 
-## Notes on the discount
-- When a visitor submits their email in the popup, it's saved to a `Subscriber` collection and remembered in their browser (`localStorage`).
-- When they later submit a reservation with that same email, the server looks up the email in the `Subscriber` collection and applies 15% off — this can't be faked by editing the browser, since the discount is recalculated server-side.
+I get to learn and try something new every day, and that's what I love most
+in the journey 🤍
+
+## What We Make
+
+- 🕷️ Car charms (like our signature crochet Spider-Man)
+- 🧸 Handmade plushies
+- 🎨 Fully custom designs, made to order
+
+## Why Handmade
+
+- No machines, no mass production — just yarn, a hook, and a lot of patience
+- Every piece is made one at a time, by hand
+- Custom requests welcome — if you can describe it, it can probably be crocheted
+
+## Get in Touch
+
+- 📸 Instagram: [@__khoyout](https://www.instagram.com/__khoyout/)
+- 💬 Introduce yourself in the comments and let's get to know each other more 🥰
+
+---
+
