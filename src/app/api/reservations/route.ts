@@ -1,10 +1,10 @@
 import { NextRequest, NextResponse } from "next/server";
 import { connectToDatabase } from "@/lib/mongodb";
 import Reservation from "@/lib/models/Reservation";
-import Subscriber from "@/lib/models/Subscriber";
 import { sendReservationEmail } from "@/lib/mailer";
+import { isEmailSubscribed } from "@/lib/checkSubscriber";
 
-const BASE_PRICE = Number(process.env.PRODUCT_PRICE ||540);
+const BASE_PRICE = Number(process.env.PRODUCT_PRICE || 530);
 const DISCOUNT_PERCENT = Number(process.env.DISCOUNT_PERCENT || 15);
 
 export async function POST(req: NextRequest) {
@@ -31,14 +31,16 @@ export async function POST(req: NextRequest) {
 
     await connectToDatabase();
 
-    // Server-side truth: only apply the discount if this email actually subscribed
-    const subscriber = await Subscriber.findOne({
-      email: String(email).toLowerCase().trim(),
-    });
-    const discountApplied = Boolean(subscriber);
+    // Compare the typed email against the subscribers collection
+    const discountApplied = await isEmailSubscribed(email);
+
+    // Debug line - check your terminal to see what price/env is actually loaded.
+    // Remove this console.log once everything looks right.
+    console.log("[reservation] BASE_PRICE env value:", process.env.PRODUCT_PRICE);
+    console.log("[reservation] discountApplied:", discountApplied);
 
     const unitPrice = discountApplied
-      ? Math.round(BASE_PRICE * (1 - DISCOUNT_PERCENT / 100))
+      ? Math.floor(BASE_PRICE * (1 - DISCOUNT_PERCENT / 100))
       : BASE_PRICE;
     const totalPrice = unitPrice * parsedQuantity;
 
@@ -59,7 +61,6 @@ export async function POST(req: NextRequest) {
     try {
       await sendReservationEmail(reservation);
     } catch (emailError) {
-      // Don't fail the whole request if email sending fails - the order is still saved
       console.error("Failed to send reservation email:", emailError);
     }
 

@@ -47,11 +47,12 @@ export default function ReservationForm() {
   const fileInputRef = useRef<HTMLInputElement>(null);
 
   useEffect(() => {
-    setHasDiscount(localStorage.getItem("khoyout_discount_email") !== null);
+    setHasDiscount(localStorage.getItem("kheyout_discount_email") !== null);
   }, []);
 
+  // Math.floor keeps this in sync with the server: 530 * 0.85 = 450.5 -> clean 450
   const unitPrice = hasDiscount
-    ? Math.round(BASE_PRICE * (1 - DISCOUNT_PERCENT / 100)-1)
+    ? Math.floor(BASE_PRICE * (1 - DISCOUNT_PERCENT / 100))
     : BASE_PRICE;
   const total = unitPrice * form.quantity;
 
